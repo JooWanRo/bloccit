@@ -2,4 +2,4 @@
 Made with my mentor, Jean-Denis, at [Bloc](http://bloc.io).
 
 ## Heroku App: joowanro-bloccit
-[Link](https://joowanro-bloccit.herokuapp.com/): https://joowanro-bloccit.herokuapp.com/
+Link: https://joowanro-bloccit.herokuapp.com/
