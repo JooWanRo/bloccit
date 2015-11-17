@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  resources :posts
 
-  get 'welcome/about'
+  # /welcome/about linked to /about
+  get 'about' => 'welcome#about'
 
   root to: 'welcome#index'
 end
