@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.zip Advertisement.all
+    @posts.each do |post, ad|
+      puts ad.price
+    end
   end
 
   def show
