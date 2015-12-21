@@ -1,0 +1,22 @@
+<h1><%= @summary.title %></h1>
+
+<% if policy(@summary).update? %>
+  <%= link_to "Edit Summary", edit_summary_path, class: 'btn btn-success' %>
+<% end %>
+
+<div class="row">
+  <div class="col-md-8">
+    <p class="lead"><%= @summary.description %></p>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to @post.title, [@topic, @post] %>
+          </h4>
+          <small>
+            submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %><br>
+            <%= @post.comments.count %> Comments
+          </small>
+        </div>
+      </div>
+  </div>
+</div>

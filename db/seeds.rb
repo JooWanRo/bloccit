@@ -39,6 +39,14 @@ topics = Topic.all
 end
 posts = Post.all
 
+15.times do |x|
+  Summary.create!(
+    title:         Faker::Lorem.sentence,
+    description:   Faker::Lorem.paragraph,
+    post:          Post.find(x+1)
+  )
+end
+
 # Create Comments
 100.times do
   Comment.create!(
