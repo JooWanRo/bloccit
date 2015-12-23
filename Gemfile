@@ -19,9 +19,12 @@ gem 'bootstrap-sass'
 gem 'pry-rails'
 gem 'faker'
 gem 'devise'
-gem 'figaro', '1.0'
+gem 'figaro', '1.1'
 gem 'pundit'
 gem 'redcarpet'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -50,10 +53,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
+# group :development, :test do
+#   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+#   gem 'byebug'
+# end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
