@@ -12,6 +12,12 @@
       <%= @post.user.name %>
     </small>
     <p><%= markdown_to_html @post.body %></p>
+    <br><br>
+    <h2>Comments</h2>
+    <%= render partial: 'comments/comment', collection: @comments %>
+    <% if current_user %>
+      <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
+    <% end %>
   </div>
   <div class="col-md-4">
     <%= image_tag(@post.image.reg.url) if @post.image? %>
