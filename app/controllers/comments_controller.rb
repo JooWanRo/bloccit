@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
     @comment.post = @post
+    authorize @comment
 
     if @comment.save
       flash[:notice] = "Comment saved successfully."

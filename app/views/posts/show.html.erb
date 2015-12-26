@@ -15,7 +15,7 @@
     <br><br>
     <h2>Comments</h2>
     <%= render partial: 'comments/comment', collection: @comments %>
-    <% if current_user %>
+    <% if policy(@comment).new? %>
       <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
     <% end %>
   </div>
