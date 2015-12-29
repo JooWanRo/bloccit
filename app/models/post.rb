@@ -32,6 +32,14 @@ class Post < ActiveRecord::Base
     update_attribute(:rank, new_rank)
   end
 
+  def save_with_initial_vote
+    ActiveRecord::Base.transaction do
+      self.save
+      self.create_vote
+    end
+    self.present?
+  end
+
   def create_vote
     user.votes.create(post_id: self.id, value: 1)
   end
