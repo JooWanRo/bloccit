@@ -53,13 +53,6 @@ posts = Post.all
   )
 end
 
-# user = User.first
-# user.skip_reconfirmation!
-# user.update_attributes!(
-#   email:    'jr3fs@virginia.edu',
-#   password: 'helloworld'
-# )
-
 # Create an admin user
 admin = User.new(
   name:         'Admin User',
@@ -88,6 +81,13 @@ member = User.new(
 )
 member.skip_confirmation!
 member.save!
+
+# user = User.new(
+#  name:         'Joo Wan Ro',
+#  email:        'jr3fs@virginia.edu',
+#  password:     'helloworld'
+#)
+#user.save!
 
 # puts "Seed finished"
 # puts "#{User.count} users created"
