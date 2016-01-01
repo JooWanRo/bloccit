@@ -17,9 +17,9 @@ describe Comment do
       allow( FavoriteMailer )
         .to receive(:new_comment)
         .with(@user, @post, @comment)
-        .and_returnn( double(deliver_now: true) )
+        .and_return( double(deliver_now: true) )
 
-        expect ( FavoriteMailer )
+        expect( FavoriteMailer )
           .to receive(:new_comment)
 
       @comment.save
