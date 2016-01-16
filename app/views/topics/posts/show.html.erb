@@ -27,10 +27,12 @@
     <p><%= markdown_to_html @post.body %></p>
     <br><br>
     <h2>Comments</h2>
-    <%= render partial: 'comments/comment', collection: @comments %>
-    <% if policy(@comment).new? %>
-      <%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
-    <% end %>
+    <div class='js-comments'>
+      <%= render partial: 'comments/comment', collection: @comments %>
+    </div>
+    <div class='new-comment'>
+      <%= render 'comments/form' %>
+    </div>
   </div>
   <div class="col-md-4">
     <%= image_tag(@post.image.reg.url) if @post.image? %>
